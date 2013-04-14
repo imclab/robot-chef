@@ -8,31 +8,36 @@
 
 osx(){
   echo "bootstrapping osx workstation"
-  # download xcode (from personal repo)
-  # mount dmg
-  # run installer
+  echo "installing ruby and rvm..."
+  \curl -L https://get.rvm.io | bash -s stable --ruby
 
-  # download homebrew
+  echo "updating rubygems..."
+  sudo gem install rubygems-update
 
-  # install git
+  echo "installing chef..."
+  sudo gem install chef --no-ri --no-rdoc
 
-  # install ruby with rvm
-  #\curl -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled # Or, --ruby=1.9.3
-
-  # install/update rubygems
-  # install chef
-  # we are done!
+  echo "finished bootstrapping osx!"
 }
 
 ubuntu(){
   echo "bootstrapping ubuntu workstation or robot"
 
-  # add opscode repo to apt sources
-  # install ruby
-  # install git core
-  # install rubygems
-  # install chef
-  # we are done bootstrapping
+  echo "adding repository to apt sources..."
+  echo "deb http://apt.opscode.com/ precise-0.10 main" | sudo tee /etc/apt/sources.list.d/opscode.list
+
+  echo "adding key..."
+  sudo mkdir -p /etc/apt/trusted.gpg.d
+  gpg --keyserver keys.gnupg.net --recv-keys 83EF826A
+  gpg --export packages@opscode.com | sudo tee /etc/apt/trusted.gpg.d/opscode-keyring.gpg > /dev/null
+  
+  echo "updating packages and installing chef..."
+  sudo apt-get update
+  sudo apt-get install opscode-keyring
+  sudo apt-get upgrade
+  sudo apt-get install chef
+
+  echo "done provisioning ubuntu host!"
 }
 
 if [ 1 == `echo $OSTYPE | grep -ic 'darwin'` ]
