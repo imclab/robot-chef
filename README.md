@@ -7,7 +7,10 @@ Procedure
 ---------
 
 ### osx
+  
   \curl https://raw.github.com/latrokles/robot-chef/master/scripts/bootstrap.sh -o bootstrap.sh; sudo bash bootstrap.sh; rm bootstrap.sh 
 
 ### ubuntu
+
   wget https://raw.github.com/latrokles/robot-chef/master/scripts/bootstrap.sh; sudo bash bootstrap.sh; rm bootstrap.sh
+
