@@ -1,4 +1,8 @@
 robot-chef
 ==========
 
-collection of scripts and chef cookbooks to setup workstation and robots
+This repository contains chef cookbooks and recipes for the provision of my workstation, laptop, and robots.
+
+Procedure
+---------
+
