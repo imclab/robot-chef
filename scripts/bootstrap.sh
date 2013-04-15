@@ -7,7 +7,7 @@
 # determine what OS are we on, osx (darwin) or ubuntu (linux-gnu)
 SL_GCC_INSTALLER='GCC-10.6.pkg'
 SL_GCC_INSTALLER_URL='https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.6.pkg'
-SL_GCC_INSTALLER_CHECKSUM='650cc32d89beb50841696aeb37a4c2d5'
+SL_GCC_INSTALLER_CHECKSUM='d1db5bab6a3f6b9f3b5577a130baeefa'
 
 osx(){
   echo "bootstrapping osx workstation"
