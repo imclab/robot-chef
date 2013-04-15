@@ -12,11 +12,10 @@ SL_GCC_INSTALLER_CHECKSUM='650cc32d89beb50841696aeb37a4c2d5'
 osx(){
   echo "bootstrapping osx workstation"
   echo "installing osx gcc installer..."
-  \curl ${SL_GCC_INSTALLER_URL} -o ~/Downloads/${SL_GCC_INSTALLER}
+  \curl ${SL_GCC_INSTALLER_URL} -o ${SL_GCC_INSTALLER}
   if [ "${SL_GCC_INSTALLER_CHECKSUM}" = "`md5 ~/Downloads/${SL_GCC_INSTALLER} | cut -d= -f2 | sed -e 's/[ ]//g'`" ]
   then
-    sudo installer -pkg ~/Downloads/${SL_GCC_INSTALLER}  -target /
-    rm ~/Downloads/${SL_GCC_INSTALLER}
+    sudo installer -pkg ${SL_GCC_INSTALLER} -target /
   else
     echo "installer doesn't match expected checksum. Exiting..."
     exit 1
@@ -40,6 +39,7 @@ osx(){
 
   echo "installing chef..."
   gem install chef --no-ri --no-rdoc
+  rm ${SL_GCC_INSTALLER}
   echo "finished bootstrapping osx!"
 }
 
