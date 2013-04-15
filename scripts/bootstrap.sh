@@ -13,7 +13,7 @@ osx(){
   echo "bootstrapping osx workstation"
   echo "installing osx gcc installer..."
   \curl ${SL_GCC_INSTALLER_URL} -o ${SL_GCC_INSTALLER}
-  if [ "${SL_GCC_INSTALLER_CHECKSUM}" = "`md5 ~/Downloads/${SL_GCC_INSTALLER} | cut -d= -f2 | sed -e 's/[ ]//g'`" ]
+  if [ "${SL_GCC_INSTALLER_CHECKSUM}" = "`md5 ${SL_GCC_INSTALLER} | cut -d= -f2 | sed -e 's/[ ]//g'`" ]
   then
     sudo installer -pkg ${SL_GCC_INSTALLER} -target /
   else
