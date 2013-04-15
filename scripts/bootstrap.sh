@@ -36,10 +36,10 @@ osx(){
   \curl -L https://get.rvm.io | bash -s stable --ruby
 
   echo "updating rubygems..."
-  sudo gem install rubygems-update
+  gem install rubygems-update
 
   echo "installing chef..."
-  sudo gem install chef --no-ri --no-rdoc
+  gem install chef --no-ri --no-rdoc
   echo "finished bootstrapping osx!"
 }
 
