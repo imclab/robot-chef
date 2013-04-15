@@ -12,7 +12,7 @@ SL_GCC_INSTALLER_CHECKSUM='650cc32d89beb50841696aeb37a4c2d5'
 osx(){
   echo "bootstrapping osx workstation"
   echo "installing osx gcc installer..."
-  \curl ${SL_GCC_INSTALLER_URL} -o ${SL_GCC_INSTALLER}
+  curl -L ${SL_GCC_INSTALLER_URL} -o ${SL_GCC_INSTALLER}
   if [ "${SL_GCC_INSTALLER_CHECKSUM}" = "`md5 ${SL_GCC_INSTALLER} | cut -d= -f2 | sed -e 's/[ ]//g'`" ]
   then
     sudo installer -pkg ${SL_GCC_INSTALLER} -target /
