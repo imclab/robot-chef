@@ -16,3 +16,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+dmg_package "Google Chrome" do
+  dmg_name "googlechrome"
+  source "https://dl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg"
+  action :install
+end
+
+dmg_package "Firefox" do
+  dmg_name "Firefox\ 21.0"
+  source "http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/21.0/mac/en-US/Firefox%2021.0.dmg"
+  action :install
+end
