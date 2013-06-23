@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: dmg
+# Cookbook Name:: osx-apps
 # Recipe:: default
 #
-# Copyright 2011, Joshua Timberman
+# Copyright 2013, YOUR_COMPANY_NAME
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,3 +16,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+include_recipse "dmg"
+
+dmg_package "Google Chrome" do
+  dmg_name "googlechrome"
+  source "https://dl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg"
+  action :install
+end
+
+dmg_package "Firefox" do
+  dmg_name "Firefox\ 21.0"
+  source "http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/21.0/mac/en-US/Firefox%2021.0.dmg"
+  action :install
+end

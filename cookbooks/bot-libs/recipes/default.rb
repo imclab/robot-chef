@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: dmg
+# Cookbook Name:: bot-libs
 # Recipe:: default
 #
-# Copyright 2011, Joshua Timberman
+# Copyright 2013, YOUR_COMPANY_NAME
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,3 +16,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+include_recipe "homebrew"
+
+hombrew_tap "homebrew/science"
+
+package "opencv"
+package "libusb"
+
+package "opencv" do
+   action :install
+end
+
+package "libusb" do
+   action :install
+end
+
+
