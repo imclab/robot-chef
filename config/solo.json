@@ -1,7 +1,9 @@
 { 
  "run_list":[
-	     "recipe[homebrew]" 
- 	     "recipe[osx-apps]",
- 	     "recipe[bot-libs]",
+             "recipe[dmg]",
+             "recipe[zip_app]",
+	     "recipe[homebrew]", 
+ 	     "recipe[osx_apps]",
+ 	     "recipe[bot_libs]"
 	    ]
 }

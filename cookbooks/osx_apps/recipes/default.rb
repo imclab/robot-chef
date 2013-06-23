@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-include_recipse "dmg"
+include_recipe "dmg"
 
 dmg_package "Google Chrome" do
   dmg_name "googlechrome"
@@ -29,4 +29,12 @@ dmg_package "Firefox" do
   dmg_name "Firefox\ 21.0"
   source "http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/21.0/mac/en-US/Firefox%2021.0.dmg"
   action :install
+end
+
+zip_app_package "Processgin" do
+  source "http://download.processing.org/processing-2.0.1-macosx.zip"
+end
+
+zip_app_package "iTerm2" do
+  source "http://www.iterm2.com/downloads/stable/iTerm2_v1_0_0.zip"
 end

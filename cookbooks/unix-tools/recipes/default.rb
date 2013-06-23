@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: bot-libs
+# Cookbook Name:: unix-tools
 # Recipe:: default
 #
 # Copyright 2013, YOUR_COMPANY_NAME
@@ -17,19 +17,11 @@
 # limitations under the License.
 #
 
-include_recipe "homebrew"
-
-hombrew_tap "homebrew/science"
-
-package "opencv"
-package "libusb"
-
-package "opencv" do
-   action :install
-end
-
-package "libusb" do
-   action :install
-end
-
-
+package "tmux"
+package "htop"
+package "tree"
+package "vim"
+package "emacs"
+package "zsh"
+package "rlwrap"
+package "exiftool"
