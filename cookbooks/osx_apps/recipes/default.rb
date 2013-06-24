@@ -31,10 +31,20 @@ dmg_package "Firefox" do
   action :install
 end
 
-zip_app_package "Processgin" do
+zip_app_package "Processing" do
   source "http://download.processing.org/processing-2.0.1-macosx.zip"
+  action :install
+  not_if { ::File.exists?("/Applications/Processing.app") }
 end
 
 zip_app_package "iTerm2" do
   source "http://www.iterm2.com/downloads/stable/iTerm2_v1_0_0.zip"
+  action :install
+  not_if { ::File.exists?("/Applications/iTerm.app") }
+end
+
+zip_app_package "unrarx" do
+  source "http://www.unrarx.com/files/UnRarX_2.2.zip"
+  action :install
+  not_if { ::File.exists?("/Applications/UnRarX.app") }
 end

@@ -4,6 +4,7 @@
              "recipe[zip_app]",
 	     "recipe[homebrew]", 
  	     "recipe[osx_apps]",
- 	     "recipe[bot_libs]"
+ 	     "recipe[bot_libs]",
+ 	     "recipe[unix-tools]"
 	    ]
 }

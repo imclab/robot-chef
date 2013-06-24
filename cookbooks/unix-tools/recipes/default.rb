@@ -20,8 +20,35 @@
 package "tmux"
 package "htop"
 package "tree"
-package "vim"
 package "emacs"
 package "zsh"
 package "rlwrap"
 package "exiftool"
+
+package "tmux" do
+   action :install
+end
+
+package "htop" do
+   action :install
+end
+
+package "tree" do
+   action :install
+end
+
+package "rlwrap" do
+   action :install
+end
+
+package "exiftool" do
+   action :install
+end
+
+package "emacs" do
+   action :install
+end
+
+package "zsh" do
+   action :install
+end
